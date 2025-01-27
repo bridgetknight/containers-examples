@@ -1,0 +1,124 @@
+:root {
+    /* Light mode colors */
+    --background-color: #f0f0f0;
+    --text-color: #000;
+    --green : #58b884;
+    --teal: #51b5b5;
+    --blue: #7491ca;
+    --purple: #b280c7;
+    --pink-shadow: #ffb3c9;
+    --medium-pink: #d78ca0;
+    --light-pink: #ffe5ed;
+    --card-background: #ffe4ef;
+    --card-accent: #931a3e;
+    --card-text: #754a57;
+    --subtitle: #696969;
+    --light-accent: #fff9fb;
+    --tag-text: #000;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: auto;
+}
+
+#header {
+    background: var(--background-color);
+    padding: 20px;
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid #ccc;
+}
+
+#main {
+    padding: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+#container_header {
+    color:var(--text-color);
+    font-weight: bold;
+    font-size: 28px;
+    letter-spacing: 0px;
+    margin: auto;
+    width: fit-content;
+}
+
+#container_subtitle {
+    color: var(--subtitle);
+    font-size: 18px;
+    font-weight: lighter;
+    margin: auto;
+    width: fit-content;
+}
+
+#container_section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+}
+
+.container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.container_image img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 10px;
+}
+
+.container_video {
+    border-radius: 8px;
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+.container_video video {
+    width: 100%;
+    height: auto;
+    z-index: 1000;
+}
+
+.container_card {
+    background: var(--card-background);
+    border: 2px solid var(--card-accent);
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px 0;
+    cursor: pointer;
+    transition: 0.3s;
+    position: relative;
+}
+
+.container_title {
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--card-accent);
+    margin-bottom: 10px;
+}
+
+.container_description {
+    font-size: 16px;
+    color: var(--card-text);
+    line-height: 20px;
+    padding-right: 0.5rem;
+}
+
+.container_content {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 1s ease-in-out, opacity 1s ease-in-out;
+}
+
+.container_content.active {
+    max-height: 1000px;
+    opacity: 1;
+}
